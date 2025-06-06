@@ -1,0 +1,25 @@
+name: split-Gibbs-sampling
+method:
+  _target_: sampling.sgdd.SGDD
+  
+  #pianoroll
+  num_steps: 50
+  ode_steps: 32
+  mh_steps: 2000
+  alpha: 1
+  max_dist: 1
+
+  # MNIST
+  # num_steps: 50
+  # ode_steps: 32
+  # mh_steps: 2000
+  # alpha: 1
+  # max_dist: 2
+
+  # DNA
+  # num_steps: 50
+  # ode_steps: 32
+  # mh_steps: 200
+  # alpha: 1
+  # max_dist: 1
+

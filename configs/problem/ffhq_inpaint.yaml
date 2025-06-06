@@ -1,0 +1,17 @@
+name: ffhq_inpaint
+model:
+  _target_: problem.vqvae.InpaintRand
+  ratio: 0.7
+
+data:
+  _target_: data.ffhq.VQFFHQ
+  root: data/ffhq256
+  end_id: 100
+
+evaluator:
+  _target_: eval.FFHQ_evaluator
+
+visualizer:
+  _target_: visualize.FFHQ_visualizer
+
+exp_dir: exps/ffhq_inpaint

@@ -1,0 +1,10 @@
+name: ffhq
+model:
+  _target_: models.sedd.SEDD_latent
+  model_path: checkpoints/ffhq_uniform_n256
+  first_stage_config:
+    name: vqvae
+    config: configs/vqvae/ffhq_f8_n256.yaml
+    path: checkpoints/vq-f8-n256.ckpt
+    res: 256
+    f: 8

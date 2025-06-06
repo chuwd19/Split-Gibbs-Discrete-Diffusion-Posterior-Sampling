@@ -1,0 +1,10 @@
+exp_name: default
+measurement: True
+num_samples: 10
+batch_size: 10
+verbose: True
+wandb: False
+defaults:
+  - model: mnist
+  - problem: XOR
+  - algorithm: daps

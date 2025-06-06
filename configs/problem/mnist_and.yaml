@@ -1,0 +1,20 @@
+name: mnist_and
+model:
+  _target_: problem.basic.AND
+  ratio: 4
+  length: 1024
+  sigma_noise: 0.1
+
+data:
+  _target_: data.mnist.MNIST
+  train: False
+  discrete: True
+  num_samples: 1000
+
+evaluator:
+  _target_: eval.MNIST_evaluator
+
+visualizer:
+  _target_: visualize.MNIST_visualizer
+
+exp_dir: exps/mnist_and

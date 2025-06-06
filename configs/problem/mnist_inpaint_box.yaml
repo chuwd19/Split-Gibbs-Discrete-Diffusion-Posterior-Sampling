@@ -1,0 +1,19 @@
+name: mnist_inpaint_box
+model:
+  _target_: problem.basic.InpaintBox
+  length: 1024
+  sigma_noise: 0.1
+
+data:
+  _target_: data.mnist.MNIST
+  train: False
+  discrete: True
+  num_samples: 100
+
+evaluator:
+  _target_: eval.MNIST_evaluator
+
+visualizer:
+  _target_: visualize.MNIST_visualizer
+
+exp_dir: exps/mnist_inpaint_box

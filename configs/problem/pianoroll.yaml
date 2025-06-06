@@ -1,0 +1,18 @@
+name: pianoroll
+model:
+  _target_: problem.basic.Inpaint
+  ratio: 0.4
+  length: 256
+
+data:
+  _target_: data.pianoroll.Pianoroll
+  train: False
+  num_samples: 10
+
+evaluator:
+  _target_: eval.Pianoroll_evaluator
+
+visualizer:
+  _target_: visualize.Visualizer
+
+exp_dir: exps/pianoroll

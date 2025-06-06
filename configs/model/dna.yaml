@@ -1,0 +1,4 @@
+name: dna
+model:
+  _target_: models.sedd.SEDD
+  model_path: checkpoints/dna_uniform

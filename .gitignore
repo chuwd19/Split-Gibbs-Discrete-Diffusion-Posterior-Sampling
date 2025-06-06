@@ -1,0 +1,9 @@
+exps/
+checkpoints/
+outputs
+__pycache__/
+applications/data_and_model
+data/MNIST
+data/pianoroll_dataset
+wandb
+debug*

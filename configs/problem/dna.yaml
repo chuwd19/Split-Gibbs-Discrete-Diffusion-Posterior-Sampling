@@ -1,0 +1,15 @@
+name: dna
+model:
+  _target_: problem.dna.DNA
+  # model: checkpoints/artifacts/DNA_evaluationv0/model.ckpt
+  model: applications/data_and_model/protein_oracle/outputs/reward_oracle_ft.pt
+  sigma_noise: 0.1
+
+evaluator:
+  _target_: eval.DNA_evaluator
+
+visualizer:
+  _target_: visualize.Visualizer
+
+exp_dir: exps/dna
+

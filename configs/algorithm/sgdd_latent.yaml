@@ -1,0 +1,8 @@
+name: split-Gibbs-sampling-latent
+method:
+  _target_: sampling.sgdd.SGDD_latent
+  num_steps: 70
+  ode_steps: 64
+  mh_steps: 5000
+  alpha: 10
+  max_dist: 5

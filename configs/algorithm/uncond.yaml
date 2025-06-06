@@ -1,0 +1,4 @@
+name: uncond
+method:
+  _target_: sampling.uncond.Uncond
+  latent: False
