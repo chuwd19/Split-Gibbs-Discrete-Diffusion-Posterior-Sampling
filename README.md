@@ -1,10 +1,10 @@
 # SGDD: Split Gibbs Discrete Diffusion Posterior Sampling
 
+#### 📝 [ArXiv](https://arxiv.org/abs/2503.01161) 
+
 ## Introduction
 
 We propose a principled plug-and-play discrete diffusion sampling method, called **S**plit **G**ibbs **D**iscrete **D**iffusion Posterior Sampling. Our method solves inverse problems and generate reward guided samples in discrete-state spaces using discrete diffusion models as a prior.
-
-
 
 
 ## Local Setup
