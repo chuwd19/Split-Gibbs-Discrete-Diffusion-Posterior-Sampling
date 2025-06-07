@@ -33,7 +33,7 @@ class Evaluator(ABC):
 class MNIST_evaluator_cls(Evaluator):
     def __init__(self, device="cuda", decompose=True):
         self.classifier = SimpleConv()
-        self.classifier.load_state_dict(torch.load("checkpoints/mnist_model.pth"))
+        self.classifier.load_state_dict(torch.load("checkpoints/mnist_classifier_eval.pth"))
         self.classifier.to(device)
         self.metric_list = {
             'Acc': lambda gt, pred, gt_y, pred_y: (self.classifier(pred).argmax(dim=1) == torch.zeros(pred.shape[0],device=pred.device)).float(),
@@ -61,7 +61,7 @@ class MNIST_evaluator_cls(Evaluator):
 class MNIST_evaluator(Evaluator):
     def __init__(self, device="cuda", decompose=True):
         self.classifier = SimpleConv()
-        self.classifier.load_state_dict(torch.load("checkpoints/mnist_model.pth"))
+        self.classifier.load_state_dict(torch.load("checkpoints/mnist_classifier_eval.pth"))
         self.classifier.to(device)
         self.metric_list = {
             'PSNR': lambda gt, pred, gt_y, pred_y: psnr(gt.clip(0, 1), pred.clip(0, 1), data_range=1.0, reduction='none'),
